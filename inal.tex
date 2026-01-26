@@ -119,26 +119,28 @@ Let’s double $L$
 \end{itemize}
 
 \subsection{Iceberg trading}
+Country $D$ (with variable levels denoted as $v_D^{(0)}$) opens up and starts trading with country $X$ (with variable levels denoted as $v_X^{(0)}$); resulting variable levels denoted as $v_D^{(1)}$
 \begin{itemize}
-  \item Iceberg type trading cost: domestic varieties have price $p^X = τ p^D$ abroad, with $τ > 1$, $p^D = \frac{σ}{σ - 1} \frac{w}{φ}$
-  \item Total production is $q = q^D + τ q^X$, with $q^X$ the quantity that effectively arrives abroad
-  \item Thus we sell $q$ at $p^D$, equivalently, $q^D$ at $p^D$ domestically and $q^X$ at $p^X$ abroad
-  \item Total profit is $π = p^D q - w (f + \frac{q}{φ}) = \frac{1}{σ - 1} \frac{wq}{φ} - wf$
-  \item From $π = 0$ we obtain $q = φ f (σ - 1)$ as above; same as in autarky
-  \item Using $L = nf + n\frac{q}{φ}$, we obtain $n = \frac{L}{σ f}$; same as in autarky
-  \item From above, $q^X = \left(\frac{p^X}{P^X}\right)^{-σ} \frac{w^X L^X}{P^X}$, thus $q^X = \left(\frac{τ p^D}{P^X}\right)^{-σ} \frac{w^X L^X}{P^X}$
-  \item It follows that the value $X = τ p^D q^X n$ of aggregate exports (the gravity equation) depend linearly on $L^D L^P$ and on $τ^{1 - σ}$.
+  \item Iceberg type trading cost: domestic varieties have price $p_{D → X} = p_{D → X}^{(1)} = τ p_D$ abroad, with $1 ≤ τ$, $p_D = p_D^{(0)} = p_D^{(1)} = \frac{σ}{σ - 1} \frac{w}{φ}$
+  \item Total production of $D$ becomes $q_D^{(1)} = q_{D → D} + τ q_{D → X}$, with $q_{D → X}$ the quantity that effectively arrives abroad
+  \item Thus we sell $q_D^{(1)}$ at $p_D$, equivalently, $q_D$ at $p_D$ domestically and $q_{D → X}$ at $p_{D → X}$ abroad
+  \item Total profit is $π^{(1)} = p_D q_D^{(1)} - w (f + \frac{q_D^{(1)}}{φ}) = \frac{1}{σ - 1} \frac{w q_D^{(1)}}{φ} - w f$
+  \item From $π = 0$ we obtain $q_D^{(1)} = φ f (σ - 1) = q_D^{(0)}$
+  \item Using $L_D = n_D^{(1)} f + n_D^{(1)} \frac{q_D^{(1)}}{φ}$, we obtain $n_D^{(1)} = \frac{L_D}{σ f} = n_D^{(0)}$
+  \item From above, $q_{D → X} = \left(\frac{p_{D → X}}{P_X}\right)^{-σ} \frac{w_X L_X}{P_X}$, thus $q_{D → X} = \left(\frac{τ p_D}{P_X}\right)^{-σ} \frac{w_X L_X}{P_X}$
+  \item It follows that the value $X = τ p_D q_{D → X} n$ of aggregate exports (the gravity equation) depends linearly on $L_D L_X$ and on $τ^{1 - σ}$ (also, $0 ≤ τ^{1 - σ} ≤ 1$)
 \end{itemize}
 Mechanisms through which trade increases:
 \begin{description}
-  \item[$τ$ finite] Trade increases through extensive margins: countries start exchanging every varieties (why?)
+  \item[$τ$ finite] Trade increases through extensive margins: countries start exchanging every varieties
   \item[$τ$ reduces] Trade increases through intensive margins: higher export in quantity but constant number of varieties
 \end{description}
 Effect of trade:
 \begin{itemize}
-  \item ${P^D}^{(1)} = [n^D {p^D}^{1 - σ} + n^X {(τ p^D)}^{1 - σ}]^\frac{1}{1 - σ}$
-  \item With $τ = 1$ and $n^X = n^D$, we get ${P^D}^{(1)} = \frac{{P^D}^{(0)}}{2^\frac{1}{σ - 1}}$: price index decreases
+  \item ${P_D}^{(1)} = [n_D {p_D}^{1 - σ} + n_X {(τ p_D)}^{1 - σ}]^\frac{1}{1 - σ}$
+  \item With $τ = 1$ and $n_X = n_D$, we get ${P_D}^{(1)} = \frac{{P_D}^{(0)}}{2^\frac{1}{σ - 1}}$: price index decreases
   \item No pro-competitive effect: $σ$ fixed, does not contribute to lowering prices
+  \item From trade balance $X_D = X_X$
 \end{itemize}
 
 Problem is that more productive firms seem to export, which the model does not say; this is not solvable even with different trading costs (not sure why)
