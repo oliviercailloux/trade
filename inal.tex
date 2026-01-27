@@ -120,29 +120,37 @@ Let’s double $L$
 
 \subsection{Iceberg trading}
 Country $D$ (with variable levels denoted as $v_D^{(0)}$) opens up and starts trading with country $X$ (with variable levels denoted as $v_X^{(0)}$); same parameters except for sizes $L_D$ and $L_X$; resulting variable levels denoted as $v_D^{(1)}$
+\NewDocumentCommand{\jbar}{}{\overline{j}}
 \begin{itemize}
-  \item Prices of goods produced and sold in a given country are still $p = p_D = p_D^{(0)} = p_D^{(1)} = p_X = p_X^{(0)} = p_X^{(1)} = \frac{σ}{σ - 1} \frac{w}{φ}$
-  \item Iceberg type trading cost: goods sold in the other country have price $p_{D → X} = p_{D → X}^{(1)} = τ p_D$, with $1 ≤ τ$
-  \item Total production of a good produced in $D$ becomes $q_D^{(1)} = q_{D → D} + τ q_{D → X}$, with $q_{D → X}$ the quantity that effectively arrives abroad
-  \item Thus we sell $q_D^{(1)}$ at $p_D$, equivalently, $q_D$ at $p_D$ domestically and $q_{D → X}$ at $p_{D → X}$ abroad
-  \item Total profit is $π^{(1)} = p_D q_D^{(1)} - w (f + \frac{q_D^{(1)}}{φ}) = \frac{1}{σ - 1} \frac{w q_D^{(1)}}{φ} - w f$
-  \item From $π = 0$ we obtain $q_D^{(1)} = φ f (σ - 1) = q_D^{(0)}$
-  \item Using $L_D = n_D^{(1)} f + n_D^{(1)} \frac{q_D^{(1)}}{φ}$, we obtain $n_D^{(1)} = \frac{L_D}{σ f} = n_D^{(0)}$
-  \item From above, $q_{D → X} = \left(\frac{p_{D → X}}{P_X}\right)^{-σ} \frac{w_X L_X}{P_X}$, thus $q_{D → X} = \left(\frac{τ p_D}{P_X}\right)^{-σ} \frac{w_X L_X}{P_X}$
-  \item It follows that the value $X = τ p_D q_{D → X} n$ of aggregate exports (the gravity equation) depends linearly on $L_D L_X$ and on $τ^{1 - σ}$ (also, $0 ≤ τ^{1 - σ} ≤ 1$)
+  \item Prices of goods produced and sold in a given country $j ∈ \set{D, X}$ are still $p_j = p_j^{(0)} = p_j^{(1)} = \frac{σ}{σ - 1} \frac{w_j}{φ}$
+  \item Iceberg type trading cost: goods sold in the other country have price $p_{j → \jbar} = p_{j → \jbar}^{(1)} = τ p_j$, with $1 ≤ τ$
+  \item Total production of a good produced in $j$ becomes $q_j^{(1)} = q_{j → j} + τ q_{j → \jbar}$, with $q_{j → \jbar} = q_{j → \jbar}^{(1)}$ the quantity that effectively arrives abroad
+  \item Thus the enterprise sells $q_j^{(1)}$ at price $p_j$, equivalently, $q_{j → j}$ at price $p_j$ domestically and $q_{j → \jbar}$ at price $τ p_j$ abroad
+  \item It makes profit $π_j^{(1)} = p_j q_j^{(1)} - w_j (f + \frac{q_j^{(1)}}{φ}) = \frac{1}{σ - 1} \frac{w_j q_j^{(1)}}{φ} - w_j f$
+  \item From $π_j^{(1)} = 0$ we obtain $q_j = q_j^{(1)} = φ f (σ - 1) = q_j^{(0)}$
+  \item Using $L_j = n_j^{(1)} f + n_j^{(1)} \frac{q_j^{(1)}}{φ}$, we obtain $n_j = n_j^{(1)} = \frac{L_j}{σ f} = n_j^{(0)}$
+  \item $P_j^{(1)} = [n_j {p_j}^{1 - σ} + n_{\jbar} {(τ p_{\jbar})}^{1 - σ}]^\frac{1}{1 - σ}$
+  \item With $τ = 1$ and $n_j = n_{\jbar}$, we get $P_j^{(1)} = \frac{P_j^{(0)}}{2^\frac{1}{σ - 1}}$: price index decreases
+  \item No pro-competitive effect: $σ$ fixed, does not contribute to lowering prices
+  \item From above, $q_{j → \jbar} = \left(\frac{p_{j → \jbar}}{P_{\jbar}^{(1)}}\right)^{-σ} \frac{w_{\jbar} L_{\jbar}}{P_{\jbar}^{(1)}}$ (correct?), thus $q_{j → \jbar} = \left(\frac{τ p_j}{P_{\jbar}^{(1)}}\right)^{-σ} \frac{w_{\jbar} L_{\jbar}}{P_{\jbar}^{(1)}}$
+  \item It follows that the value $X_j = τ p_j n_j q_{j → \jbar}$ of aggregate exports (the gravity equation) depends linearly on $L_j L_{\jbar}$ (shouldn’t account for $P$ which depends on $n$ which depends on $L$?) and on $τ^{1 - σ}$ (note also that $0 ≤ τ^{1 - σ} ≤ 1$)
+  \item From trade balance $X_j = X_{\jbar}$, $\frac{p_j}{p_{\jbar}} = \frac{w_j}{w_{\jbar}}$, $\frac{n_j}{n_{\jbar}} = \frac{L_j}{L_{\jbar}}$ and $\frac{q_{j → \jbar}}{q_{\jbar → j}} = \frac{w_j^{-σ} w_{\jbar} L_{\jbar} {P_j^{(1)}}^{1 - σ}}{w_{\jbar}^{-σ} w_j L_j {P_{\jbar}^{(1)}}^{1 - σ}}$
+  follows $\frac{X_j}{X_{\jbar}} = 1 = \frac{w_j^{-σ} {P_j^{(1)}}^{1 - σ}}{w_{\jbar}^{-σ} {P_{\jbar}^{(1)}}^{1 - σ}}$,
+  whence $\frac{w_j}{w_{\jbar}} = \left(\frac{P_j^{(1)}}{P_{\jbar}^{(1)}}\right)^\frac{1 - σ}{σ}$
+  \item With $τ = 1$, we get $P_j^{(1)} = P_{\jbar}^{(1)}$ and thus $w_j = w_{\jbar}$.
+  \item With $τ = ∞$, 
+  we get $\left(\frac{P_j^{(1)}}{P_{\jbar}^{(1)}}\right)^{1 - σ} 
+  = \frac{n_{\jbar}}{n_j} \left(\frac{p_{\jbar}}{p_j}\right)^{1 - σ}
+  = \big(\frac{w_j}{w_{\jbar}}\big)^σ
+  = \frac{L_{\jbar}}{L_j} \left(\frac{w_{\jbar}}{w_j}\right)^{1 - σ}$ 
+  thus $\frac{w_j}{w_{\jbar}} 
+  = \left(\frac{L_{\jbar}}{L_j}\right)^\frac{1}{σ} \left(\frac{w_{\jbar}}{w_j}\right)^\frac{1 - σ}{σ}$
 \end{itemize}
 Mechanisms through which trade increases:
 \begin{description}
   \item[$τ$ finite] Trade increases through extensive margins: countries start exchanging every varieties
   \item[$τ$ reduces] Trade increases through intensive margins: higher export in quantity but constant number of varieties
 \end{description}
-Effect of trade:
-\begin{itemize}
-  \item ${P_D}^{(1)} = [n_D {p_D}^{1 - σ} + n_X {(τ p_D)}^{1 - σ}]^\frac{1}{1 - σ}$
-  \item With $τ = 1$ and $n_X = n_D$, we get ${P_D}^{(1)} = \frac{{P_D}^{(0)}}{2^\frac{1}{σ - 1}}$: price index decreases
-  \item No pro-competitive effect: $σ$ fixed, does not contribute to lowering prices
-  \item From trade balance $X_D = X_X$
-\end{itemize}
 
 Problem is that more productive firms seem to export, which the model does not say; this is not solvable even with different trading costs (not sure why)
 
