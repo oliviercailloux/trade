@@ -44,7 +44,7 @@
 
 \subsection{Production}
 \begin{itemize}
-  \item Cost of producing $q_i$ units is $w l_i$; $w$ the wage
+  \item Cost of producing $q_i$ units is $wl_i$; $w$ the wage
   \item $L$ identical consumers thus $q_i = L c_i$; whence $σ(c_i) = - \frac{∂q_i}{∂p_i} \frac{p_i}{q_i}$
   \item Marginal Cost is $\textit{MC} = \frac{w}{φ}$
   \item Revenue of the firm on product $i$ is $R_i = p_i q_i$ (and $R = \sum_{1 ≤ i ≤ n} p_i q_i$)
@@ -81,32 +81,28 @@ PP curve:
 Let’s double $L$
 \begin{itemize}
   \item ZZ curve shifts downwards
-  \item $c^{(1)} < c^{(0)}$
-  \item More varieties: $n^{(0)} = \frac{1}{\frac{f}{L} + \frac{c^{(0)}}{φ}} < \frac{1}{\frac{f}{2L} + \frac{c^{(1)}}{φ}} = n^{(1)}$
-  \item Under assumption $σ'(c) < 0$, $σ(c^{(0)}) < σ(c^{(1)})$ thus $(\frac{p}{w})^{(1)} < (\frac{p}{w})^{(0)}$
-  \item Under assumption $σ'(c) < 0$, some firms exit: $n^{(1)} = \frac{1}{\frac{f}{2L} + \frac{c^{(1)}}{φ}} < \frac{1}{\frac{f}{2L} + \frac{c^{(0)}}{2 φ}} = 2 n^{(0)}$, equivalently, $c^{(0)} < 2 c^{(1)}$.
-  Proof: let $(c^{(1)}, (\frac{p}{w})^{(1)})$ be the equilibrium after doubling $L$, thus $(2c^{(1)}, (\frac{p}{w})^{(1)})$ is on the ZZ curve before doubling $L$, and all points with $c ≥ 2 c^{(1)}$ are strictly below the PP curve (because its derivative is positive) and not below the ZZ curve (because its derivative is negative) so not equilibrium points.
+  \item $c_1 < c_0$
+  \item More varieties: $n_0 = \frac{1}{\frac{f}{L} + \frac{c_0}{φ}} < \frac{1}{\frac{f}{2L} + \frac{c_1}{φ}} = n_1$
+  \item Under assumption $σ'(c) < 0$, $σ(c_0) < σ(c_1)$ thus $(\frac{p}{w})_1 < (\frac{p}{w})_0$
+  \item Under assumption $σ'(c) < 0$, some firms exit: $n_1 = \frac{1}{\frac{f}{2L} + \frac{c_1}{φ}} < \frac{1}{\frac{f}{2L} + \frac{c_0}{2 φ}} = 2 n_0$, equivalently, $c_0 < 2 c_1$.
+  Proof: let $(c_1, (\frac{p}{w})_1)$ be the equilibrium after doubling $L$, thus $(2c_1, (\frac{p}{w})_1)$ is on the ZZ curve before doubling $L$, and all points with $c ≥ 2 c_1$ are strictly below the PP curve (because its derivative is positive) and not below the ZZ curve (because its derivative is negative) so not equilibrium points.
 \end{itemize}
 
 \section{CES utility}
 \subsection{Consumer}
 \begin{itemize}
   \item A single consumer utility is $U(\bar{c}) = (\sum_{1 ≤ i ≤ n} c_i^\frac{σ - 1}{σ})^\frac{σ}{σ - 1}$ (a country $j$ utility is $U_j(L\bar{c})) = L U(\bar{c})$)
-  \item Revenue constraint is $w = \sum p_i c_i$
-  \item From the Lagrangian we obtain $\frac{σ}{σ - 1} U(\bar{c})^\frac{1}{σ} \frac{σ - 1}{σ} c_i^{\frac{σ - 1}{σ} - 1} - λ p_i = 0$ (because $\frac{σ}{σ - 1} - 1 = \frac{σ}{σ - 1}\frac{1}{σ}$), thus $c_i = λ^{-σ} p_i^{-σ} U(\bar{c})$
+  \item Revenue constraint thes $w = \p_i c_i$
+  \it^\text{country} From the agrangian we obtain $\frac{σ}{σ - 1} U(\bar{c})^\frac{1}{σ} \frac{σ - 1}{σ} c_i^{\frac{σ - 1}{σ} - 1} - λ p_i = 0$ (because $\frac{σ}{σ - 1} - 1 = \frac{σ}{σ - 1}\frac{1}{σ}$), thus $c_i = λ^{-σ} p_i^{-σ} U(\bar{c})$
   \item Thus $U(\bar{c}) = (\sum p_i^{1 - σ})^{\frac{-σ}{1 - σ}} λ^{-σ} U(\bar{c})$, whence $λ^σ = (\sum p_i^{1 - σ})^{\frac{-σ}{1 - σ}}$ and $c_i = \frac{p_i^{-σ} U(\bar{c})}{(\sum p_i^{1 - σ})^{\frac{-σ}{1 - σ}}}$
   \item Thus $p_i c_i = \frac{p_i^{1 - σ} U(\bar{c})}{(\sum p_i^{1 - σ})^{\frac{-σ}{1 - σ}}}$, and summing over $i$, $w = \frac{\sum p_i^{1 - σ}}{(\sum p_i^{1 - σ})^{\frac{-σ}{1 - σ}}} U(\bar{c}) = (\sum p_i^{1 - σ})^{\frac{1}{1 - σ}} U(\bar{c})$
   \item Define the ideal price index as $P = \frac{w}{U(\bar{c})} = (\sum p_i^{1 - σ})^\frac{1}{1 - σ}$: it increases in the same way that the welfare decreases (price-index elasticity of utility is minus one); it is the cost of one unit of happiness
-  \item It follows that $c_i = (\frac{p_i}{P})^{-σ} \frac{w}{P}$, and finally, using $q_i = Lc_i$: $q_i = (\frac{p_i}{P})^{-σ} \frac{w L}{P}$
-  \item We obtain elasticity of demand $ε_i = \frac{∂q_i}{∂p_i} \frac{p_i}{q_i} = \left(-σ q_i (\frac{p_i}{P})^{-1} \frac{∂}{∂p_i} (\frac{p_i}{P})\right) \frac{p_i}{q_i}$, and, approximating $P$ as constant with respect to $p_i$ (how?), $ε_i ≈ -σ$
+  \item It follows that $c_i = (\frac{p_i}{P})^{-σ} \frac{w}{P}$, and finally, using $q_i = Lc_i$: $q_i = (\frac{p_i}{P})^{-σ} \frac{wL}{P}$
+  \item We obtain elasticity of demand $ε_i = \frac{∂q_i}{∂p_i} \frac{p_i}{q_i} = \left(-σ q_i (\frac{p_i}{P})^{-1} \frac{∂}{∂p_i} (\frac{p_i}{P})\right) \frac{p_i}{q_i}$, and, approximating $P$ as constant with respect to $p_i$, $ε_i ≈ -σ$
   \item Given $i ≠ j$, elasticity of substitution $ε_{ij} = \frac{∂ln(q_i / q_j)}{∂ln(p_j / p_i)} = -σ$ (using $\frac{q_i}{q_j} = (\frac{p_i}{p_j})^{-σ}$)
   \item Using symmetric prices, $P = n^{\frac{1}{1 - σ}} p$
-  \item We have $U_j(\bar{q}) = \frac{Lw}{p} n^\frac{1}{σ - 1}$ thus $\frac{∂ \log U}{∂ \log n} = \frac{1}{σ - 1}$
-  \item When varieties increase, welfare increases at rate $\frac{∂ \log U}{∂ \log n} = \frac{1}{σ - 1}$
-\end{itemize}
-
-\subsection{Producer}
-\begin{itemize}
+  \item We have $U_j(\bar{q}) = \frac{Lw}{p} n^\frac{1}{σ - 1}$ thus $\frac{∂ \log U}{∂ \log n} = \frac{1}{σ - $
+  \icem Why “Welare increases at a rate in{itemize}
   \item As above, $l_i = f + q_i / φ$; to optimize profit set $MR_i = \frac{∂p_i}{∂q_i}q_i + p_i = \frac{p_i}{ε_i} + p_i = MC = \frac{w}{φ}$, obtain $\frac{p_i}{w} = \frac{σ}{σ - 1} \frac{1}{φ}$
   \item At zero profit $\frac{π_i}{w} = \frac{p_i}{w} q_i - f - \frac{1}{φ} q_i = 0$, we obtain a constant output per variety, $q_i = φ f (σ - 1)$
 \end{itemize}
@@ -119,6 +115,15 @@ Let’s double $L$
 \end{itemize}
 
 \subsection{Iceberg trading}
+\begin{itemize}
+  \item Iceberg type trading cost: 
+\end{itemize}
+
+%\bibliography{bibl}
+
+\end{document}
+
+[widest={\bfseries{}SUBJECT-Assessment-WI
 Country $D$ (with variable levels denoted as $v_D^{(0)}$) opens up and starts trading with country $X$ (with variable levels denoted as $v_X^{(0)}$); same parameters except for sizes $L_D$ and $L_X$; resulting variable levels denoted as $v_D^{(1)}$
 \NewDocumentCommand{\jbar}{}{\overline{j}}
 \begin{itemize}
@@ -152,20 +157,17 @@ Mechanisms through which trade increases:
   \item[$τ$ reduces] Trade increases through intensive margins: higher export in quantity but constant number of varieties
 \end{description}
 
-Problem is that more productive firms seem to export, which the model does not say; this is not solvable even with different trading costs (not sure why)
-
-TODO solve the exercice CES demand with vertical differentiation
-
-\section{Melitz}
-Here we implicitly normalize by setting $w = 1$.
-
-We write $φ_d$ the equivalent of $φ_a$ under non-autarky so actually $φ_a^{(1)}$ as compared to $φ_a^{(0)}$
-
-Note that $π(φ)$ is the profit of a single firm of the type $φ$; to get the profit of the whole type $φ$ we’d need to consider the density $g$.
-
-Note that there is no aggregate profit to redistribute because the total profit is precisely the total entry cost (zero entry condition).
-
-%\bibliography{bibl}
-
-\end{document}
+\subsection{Example}
+\begin{itemize}
+  \item Set $p = 1$, $φ = σ = 2$ and $f = 1/2$
+  \item Producer: $w^{(0)} = 1$, $q = 1$
+  \item Solving: $n_j = L_j$, $P_j^{(0)} = 1/L_j$
+  \item Consumer: $c_j = 1/L_j$, $U(c_j) = L_j$
+  \item Set $L_D = 1$ and $L_X = 2$
+  \item $n_D = P_D^{(0)} = c_D = U(c_D) = 1$
+  \item $n_X = U(c_X) = 2$, $P_X^{(0)} = c_X = 1/2$
+  \item $p_{j → \jbar} = τ$
+  \item $P_D^{(1)} = 1/(1 + 2/τ) = τ/(τ+2)$
+  \item $P_X^{(1)} = 1/(2 + 1/τ) = τ/(2τ+1)$
+\end{itemize}
 
