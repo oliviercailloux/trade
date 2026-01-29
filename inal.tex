@@ -90,16 +90,29 @@ Let’s double $L$
 
 \section{CES utility}
 \subsection{Consumer}
+\subsubsection{Set up}
 \begin{itemize}
-  \item A single consumer utility is $U(\bar{c}) = (\sum_{1 ≤ i ≤ n} c_i^\frac{σ - 1}{σ})^\frac{σ}{σ - 1}$ (a country $j$ utility is $U_j(L\bar{c}) = L U(\bar{c})$)
+  \item A single consumer utility is $U(\bar{c}) = (\sum_{1 ≤ i ≤ n} c_i^\frac{σ - 1}{σ})^\frac{σ}{σ - 1}$ (a country utility is $U(L\bar{c}) = L U(\bar{c})$)
   \item Revenue constraint is $w = \sum p_i c_i$
-  \item From the Lagrangian we obtain $\frac{σ}{σ - 1} U(\bar{c})^\frac{1}{σ} \frac{σ - 1}{σ} c_i^{\frac{σ - 1}{σ} - 1} - λ p_i = 0$ (because $\frac{σ}{σ - 1} - 1 = \frac{σ}{σ - 1}\frac{1}{σ}$), thus $c_i = λ^{-σ} p_i^{-σ} U(\bar{c})$
-  \item Thus $U(\bar{c}) = (\sum p_i^{1 - σ})^{\frac{-σ}{1 - σ}} λ^{-σ} U(\bar{c})$, whence $λ^σ = (\sum p_i^{1 - σ})^{\frac{-σ}{1 - σ}}$ and $c_i = \frac{p_i^{-σ} U(\bar{c})}{(\sum p_i^{1 - σ})^{\frac{-σ}{1 - σ}}}$
-  \item Thus $p_i c_i = \frac{p_i^{1 - σ} U(\bar{c})}{(\sum p_i^{1 - σ})^{\frac{-σ}{1 - σ}}}$, and summing over $i$, $w = \frac{\sum p_i^{1 - σ}}{(\sum p_i^{1 - σ})^{\frac{-σ}{1 - σ}}} U(\bar{c}) = (\sum p_i^{1 - σ})^{\frac{1}{1 - σ}} U(\bar{c})$
+\end{itemize}
+
+\subsubsection{Demand}
+\begin{itemize}
+  \item From the Lagrangian we obtain $\frac{σ}{σ - 1} U(\bar{c})^\frac{1}{σ} \frac{σ - 1}{σ} c_i^{\frac{σ - 1}{σ} - 1} - λ p_i = 0$ (because $\frac{σ}{σ - 1} - 1 = \frac{σ}{σ - 1}\frac{1}{σ}$), 
+  thus $c_i = λ^{-σ} p_i^{-σ} U(\bar{c})$,
+  so that $\sum p_i c_i = w = \sum p_i^{1 - σ} λ^{-σ} U(\bar{c})$
+  \item Thus, $λ^{-σ} U(\bar{c}) = \frac{w}{\sum p_i^{1 - σ}}$, 
+  then $c_i = p_i^{-σ} \frac{w}{\sum p_k^{1 - σ}}$, 
+  and using $q_i = Lc_i$, we obtain $q_i = p_i^{-σ} \frac{wL}{\sum p_k^{1 - σ}}$
+\end{itemize}
+
+\subsubsection{Price index}
+\begin{itemize}
+  \item $U(\bar{c}) = (\sum p_i^{1 - σ})^{\frac{σ}{σ - 1}} λ^{-σ} U(\bar{c})$, whence $λ^{-σ} = (\sum p_i^{1 - σ})^{\frac{σ}{1 - σ}}$, and using $\frac{w}{U(\bar{c})} = \sum p_i^{1 - σ} λ^{-σ}$, we get $\frac{w}{U(\bar{c})} = (\sum p_i^{1 - σ})^{\frac{1}{1 - σ}}$
   \item Define the ideal price index as $P = \frac{w}{U(\bar{c})} = (\sum p_i^{1 - σ})^\frac{1}{1 - σ}$: it increases in the same way that the welfare decreases (price-index elasticity of utility is minus one); it is the cost of one unit of happiness
-  \item It follows that $c_i = (\frac{p_i}{P})^{-σ} \frac{w}{P}$, and finally, using $q_i = Lc_i$: $q_i = (\frac{p_i}{P})^{-σ} \frac{wL}{P}$
+  \item We can write $q_i = (\frac{p_i}{P})^{-σ} \frac{wL}{P}$
   \item We obtain elasticity of demand $ε_i = \frac{∂q_i}{∂p_i} \frac{p_i}{q_i} = \left(-σ q_i (\frac{p_i}{P})^{-1} \frac{∂}{∂p_i} (\frac{p_i}{P})\right) \frac{p_i}{q_i}$, and, approximating $P$ as constant with respect to $p_i$ (does this make sense?), $ε_i ≈ -σ$
-  \item Given $i ≠ j$, elasticity of substitution $ε_{ij} = \frac{∂ln(q_i / q_j)}{∂ln(p_j / p_i)} = -σ$ (using $\frac{q_i}{q_j} = (\frac{p_i}{p_j})^{-σ}$)
+  \item Given goods $i ≠ j$, elasticity of substitution $ε_{ij} = \frac{∂ln(q_i / q_j)}{∂ln(p_j / p_i)} = -σ$ (using $\frac{q_i}{q_j} = (\frac{p_i}{p_j})^{-σ}$)
   \item Using symmetric prices, $P = n^{\frac{1}{1 - σ}} p$
   \item We have $U_j(\bar{q}) = \frac{Lw}{p} n^\frac{1}{σ - 1}$ thus $\frac{∂ \log U}{∂ \log n} = \frac{1}{σ - 1}$
   \item When varieties increase, welfare increases at rate $\frac{∂ \log U}{∂ \log n} = \frac{1}{σ - 1}$
@@ -109,12 +122,12 @@ Let’s double $L$
 \begin{itemize}
   \item As above, $l_i = f + q_i / φ$; to optimize profit set $MR_i = \frac{∂p_i}{∂q_i}q_i + p_i = \frac{p_i}{ε_i} + p_i = MC = \frac{w}{φ}$, obtain $\frac{p_i}{w} = \frac{σ}{σ - 1} \frac{1}{φ}$
   \item At zero profit $\frac{π_i}{w} = \frac{p_i}{w} q_i - f - \frac{1}{φ} q_i = 0$, we obtain a constant output per variety, $q_i = φ f (σ - 1)$
+  \item Using symmetric goods and market clearing condition $L = nf + n \frac{q}{φ}$, we obtain $n = \frac{L}{σf}$
 \end{itemize}
 
 \subsection{Solving, in autarky}
 \begin{itemize}
-  \item Using symmetric goods and market clearing condition $L = nf + n \frac{q}{φ}$, we obtain $n = \frac{L}{σf}$
-  \item Thus, $P = \frac{1}{n^{\frac{1}{σ - 1}}} \frac{σ}{σ - 1} \frac{w}{φ} = (\frac{σf}{L})^{\frac{1}{σ - 1}} \frac{σ}{σ - 1} \frac{w}{φ}$
+  \item We get $P = (\frac{σf}{L})^{\frac{1}{σ - 1}} \frac{σ}{σ - 1} \frac{w}{φ}$
   \item We see that increasing $n$, or increasing $L$, decreases the price index, thus increases welfare
 \end{itemize}
 
@@ -122,7 +135,7 @@ Let’s double $L$
 \NewDocumentCommand{\jbar}{}{\overline{j}}
 Two countries $\set{D, X}$ with same parameters except for sizes $L_j$ ($j \in \set{D, X}$) open up and starts trading; we write their initial variable levels (in autarky) as $v_j^{(\text{A})}$ and resulting variable levels (under exchange) as $v_j^{(\text{E})}$; given $j \in \set{D, X}$, let $\jbar$ denote the other country.
 \begin{itemize}
-  \item Prices of goods produced and sold in a given country $j ∈ \set{D, X}$ are still $p_j = p_j^{(\text{A})} = p_j^{(\text{E})} = \frac{σ}{σ - 1} \frac{w_j}{φ}$ (Do this make sense? If wages change, prices should change. If so, do slides refer to old or new prices? What’s even the meaning of prices changing, as they set the unit of the scale? Should we assume $p_j^{(\text{A})}, p_j^{(\text{E})}, p_{\jbar}^{(\text{A})}$ fixed but $p_{\jbar}^{(\text{E})}$ variable?)
+  \item Prices of goods produced and sold in a given country $j ∈ \set{D, X}$ are still $p_j = p_j^{(\text{A})} = p_j^{(\text{E})} = \frac{σ}{σ - 1} \frac{w_j}{φ}$ (Does this make sense? If wages change, prices should change. If so, do slides refer to old or new prices? What’s even the meaning of prices changing, as they set the unit of the scale? Should we assume $p_j^{(\text{A})}, p_j^{(\text{E})}, p_{\jbar}^{(\text{A})}$ fixed but $p_{\jbar}^{(\text{E})}$ variable?)
   \item Iceberg type trading cost: goods sold in the other country have price $p_{j → \jbar} = p_{j → \jbar}^{(\text{E})} = τ p_j$, with $1 ≤ τ$
   \item Total production of a good produced in $j$ becomes $q_j^{(\text{E})} = q_{j → j} + τ q_{j → \jbar}$, with $q_{j → \jbar} = q_{j → \jbar}^{(\text{E})}$ the quantity that effectively arrives abroad
   \item Thus the enterprise sells $q_j^{(\text{E})}$ at price $p_j$, equivalently, $q_{j → j}$ at price $p_j$ domestically and $q_{j → \jbar}$ at price $τ p_j$ abroad
@@ -170,19 +183,6 @@ Mechanisms through which trade increases:
   \item $P_D^{(\text{E})} = 1/(1 + 2/τ) = τ/(τ+2)$
   \item $P_X^{(\text{E})} = 1/(2 + 1/τ) = τ/(2τ+1)$
 \end{itemize}
-
-Problem is that more productive firms seem to export, which the model does not say; this is not solvable even with different trading costs (not sure why)
-
-TODO solve the exercice CES demand with vertical differentiation
-
-\section{Melitz}
-Here we implicitly normalize by setting $w = 1$.
-
-We write $φ_d$ the equivalent of $φ_a$ under non-autarky so actually $φ_a^{(1)}$ as compared to $φ_a^{(0)}$
-
-Note that $π(φ)$ is the profit of a single firm of the type $φ$; to get the profit of the whole type $φ$ we’d need to consider the density $g$.
-
-Note that there is no aggregate profit to redistribute because the total profit is precisely the total entry cost (zero entry condition).
 
 %\bibliography{bibl}
 
