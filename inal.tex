@@ -199,9 +199,56 @@ Note that there is no aggregate profit to redistribute because the total profit 
 \subsection{Set up}
 \begin{itemize}
   \item We normalize the wage to $w = 1$
-  \item Productivity $γ: Ω → (0, ∞)$ is a positive random variable on $Ω$ associated with probability $P$ (thus with $P(∅) = 0$ and $P(Ω) = P(γ ∈ (0, ∞)) = 1$), CDF defined as $G(φ) = P(γ ≤ φ)$ (thus $G(0) = 0$), assumed differentiable, and PDF defined as $g(φ) = G'(φ)$ (thus $G(a) = \int_0^a g(φ) dφ$)
+  \item Productivity $φ$ is drawn from a productivity space $Φ ⊆ (0, ∞)$ under probability measure $μ: \mathcal{B}(Φ) → [0, 1]$ (thus $μ(∅) = 0$, $μ(Φ) = 1$); we write its CDF, given $φ ∈ Φ$, as $G(φ) = μ((0, φ])$, corresponding to the probability that productivity is at most $φ$
 \end{itemize}
 
+\subsection{Consumer}
+\begin{itemize}
+  \item The demand of a single customer of a good from firm with productivity $φ$ is $c_φ$
+  \item A single consumer utility is $U(\bar{c}) = (\int_Φ c_φ^\frac{σ - 1}{σ} dφ)^\frac{σ}{σ - 1}$ (a country utility is $U(L \bar{c}) = L U(\bar{c})$)
+  \item Revenue constraint is $1 = \sum p_i c_i$
+  \item As above, we define $P = \frac{1}{U(\bar{c})} = (\int_Φ p_φ^{1 - σ} dφ)^\frac{1}{1 - σ}$ and obtain $c_φ = \frac{1}{P^{1 - σ}} \frac{1}{p_φ^σ}$ and $q_φ = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^σ}$
+\end{itemize}
+
+\subsection{Producer}
+\begin{itemize}
+  \item Fixed costs $f_d$ to serve domestic market and $f_x$ to serve foreign market
+  \item As above, we obtain $p_φ = \frac{σ}{σ - 1} \frac{1}{φ}$
+  \item Revenue of firm of type $φ$ is $r(φ) = p_φ q_φ = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^{σ - 1}} = A φ^{σ - 1}$ with $A = \frac{L}{P^{1 - σ}} (\frac{σ - 1}{σ})^{σ - 1}$
+  \item Profit is $π(φ) = B_a φ^{σ - 1} - f_d$ with $B_a = \frac{L}{P_a^{1 - σ}} \frac{(σ - 1)^{σ - 1}}{σ^{σ - 1} σ} = \frac{A}{σ}$
+  \item Profit is $π(φ) 
+  = p_φ q_φ - \frac{q_φ}{φ} - f_d
+  = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^{σ - 1}} - \frac{L}{P^{1 - σ}} \frac{1}{φ p_φ^σ} - f_d
+  = \frac{L}{P^{1 - σ}} (\frac{1}{p_φ^{σ - 1}} - \frac{1}{φ p_φ^σ}) - f_d
+  = \frac{L}{P^{1 - σ}} ((\frac{σ - 1}{σ})^{σ - 1} φ^{σ - 1} - (\frac{σ - 1}{σ})^σ φ^{σ - 1}) - f_d
+  = \frac{L}{P^{1 - σ}} (\frac{σ - 1}{σ})^{σ - 1} φ^{σ - 1} (1 - (\frac{σ - 1}{σ})) - f_d
+  = A φ^{σ - 1} (\frac{1}{σ}) - f_d$
+  \item Profit is $π(φ) 
+  = p_φ q_φ - \frac{q_φ}{φ} - f_d
+  = p_φ q_φ (1 - \frac{1}{p_φ φ}) - f_d
+  = p_φ q_φ (1 - \frac{σ - 1}{σ}) - f_d
+  = A φ^{σ - 1} (\frac{1}{σ}) - f_d 
+  = B φ^{σ - 1} - f_d$
+  with $B = \frac{A}{σ}$
+  % \item Profit is $π(φ) 
+  % = p_φ q_φ - \frac{q_φ}{φ} - f_d 
+  % = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^{σ - 1}} - \frac{L}{P^{1 - σ}} \frac{1}{φ p_φ^σ} - f_d 
+  % = \frac{L}{P^{1 - σ}} (\frac{1}{p_φ^{σ - 1}} - \frac{1}{φ p_φ^σ}) - f_d
+  % = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^{σ - 1}} (1 - \frac{1}{φ p_φ}) - f_d$
+  % \item Profit is $π(φ) = r(φ) - \frac{q_φ}{φ} - f_d = \frac{r(φ)}{σ} - f_d$
+  \item Zero Cutoff (ZCP?) is the level $φ_a$ such that $π(φ_a) = 0$
+  \item Firms in $(0, φ_a)$ exit, set with measure $G(φ_a)$; define $Φ^* = (φ_a, ∞)$ as the active firms, with measure $μ(Φ^*)$; define $μ^* = \frac{μ}{μ(Φ^*)}$ as the measure normalized for the active firms (thus, the conditional distribution of productivity given entry)
+  \item Define fixed entry cost $f_e = \int_{Φ^*} π dμ$ as the expected profit of entering
+  \item Aggregate productivity is $\bar{φ}(φ_a) = (\int_{Φ^*} φ^{σ - 1} dμ^*)^\frac{1}{σ - 1}$
+  \item Let $M_e$ be the mass of drawers (potential entrants), then the mass of producers (entered) is $M_a = M_e (1 - G(φ_a))$
+  \item Price index under autarky of producers (?) is 
+  $P_a = (M_a \int_{Φ^*} p_φ^{1 - σ} dμ^*)^\frac{1}{1 - σ} 
+  = M_a^\frac{1}{1 - σ} \frac{σ}{σ - 1} (\int_{Φ^*} (\frac{1}{φ})^{1 - σ} dμ^*)^\frac{1}{1 - σ} 
+  = M_a^\frac{1}{1 - σ} \frac{σ}{σ - 1} \frac{1}{\bar{φ}(φ_a)}$
+  \item We also use $B_a φ^{σ - 1} = \frac{φ^{σ - 1} - φ_a^{σ - 1}}{φ_a^{σ - 1}}$ (dunno why)
+  \item Obtain $f_e = f_d J(φ_a)$ with $J(φ_a) = \int_{Φ^*} \left((\frac{φ}{φ_a})^{σ - 1} - 1\right) dμ$
+  \item Expected profit conditional to entering is $\bar{π}(φ_a) = \int_{Φ^*} π(φ) dμ^* = \frac{f_e}{μ(Φ^*)}$
+\end{itemize}
 %\bibliography{bibl}
 
 \end{document}
