@@ -135,34 +135,34 @@ Let’s double $L$
 \NewDocumentCommand{\jbar}{}{\overline{j}}
 Two countries $\set{D, X}$ with same parameters except for sizes $L_j$ ($j \in \set{D, X}$) open up and starts trading; we write their initial variable levels (in autarky) as $v_j^{(\text{A})}$ and resulting variable levels (under exchange) as $v_j^{(\text{E})}$; given $j \in \set{D, X}$, let $\jbar$ denote the other country.
 \begin{itemize}
-  \item Prices of goods produced and sold in a given country $j ∈ \set{D, X}$ are still $p_j = p_j^{(\text{A})} = p_j^{(\text{E})} = \frac{σ}{σ - 1} \frac{w_j}{φ}$ (Does this make sense? If wages change, prices should change. If so, do slides refer to old or new prices? What’s even the meaning of prices changing, as they set the unit of the scale? Should we assume $p_j^{(\text{A})}, p_j^{(\text{E})}, p_{\jbar}^{(\text{A})}$ fixed but $p_{\jbar}^{(\text{E})}$ variable? Actually we can normalize only one of the variables, say, the new wage!)
-  \item Iceberg type trading cost: goods sold in the other country have price $p_{j → \jbar} = p_{j → \jbar}^{(\text{E})} = τ p_j$, with $1 ≤ τ$
+  \item Prices of goods produced and sold in a given country $j ∈ \set{D, X}$ are still $p_j^{(\text{E})} = \frac{σ}{σ - 1} \frac{w_j^{(\text{E})}}{φ}$
+  \item Iceberg type trading cost: goods sold in the other country have price $p_{j → \jbar} = p_{j → \jbar}^{(\text{E})} = τ p_j^{(\text{E})}$, with $1 ≤ τ$
   \item Total production of a good produced in $j$ becomes $q_j^{(\text{E})} = q_{j → j} + τ q_{j → \jbar}$, with $q_{j → \jbar} = q_{j → \jbar}^{(\text{E})}$ the quantity that effectively arrives abroad
-  \item Thus the enterprise sells $q_j^{(\text{E})}$ at price $p_j$, equivalently, $q_{j → j}$ at price $p_j$ domestically and $q_{j → \jbar}$ at price $τ p_j$ abroad
-  \item It makes profit $π_j^{(\text{E})} = p_j q_j^{(\text{E})} - w_j (f + \frac{q_j^{(\text{E})}}{φ}) = \frac{1}{σ - 1} \frac{w_j q_j^{(\text{E})}}{φ} - w_j f$
+  \item Thus the enterprise sells $q_j^{(\text{E})}$ at price $p_j^{(\text{E})}$, equivalently, $q_{j → j}$ at price $p_j^{(\text{E})}$ domestically and $q_{j → \jbar}$ at price $τ p_j^{(\text{E})}$ abroad
+  \item It makes profit $π_j^{(\text{E})} = p_j^{(\text{E})} q_j^{(\text{E})} - w_j^{(\text{E})} (f + \frac{q_j^{(\text{E})}}{φ}) = \frac{1}{σ - 1} \frac{w_j^{(\text{E})} q_j^{(\text{E})}}{φ} - w_j^{(\text{E})} f$
   \item From $π_j^{(\text{E})} = 0$ we obtain $q_j = q_j^{(\text{E})} = φ f (σ - 1) = q_j^{(\text{A})}$
   \item Using $L_j = n_j^{(\text{E})} f + n_j^{(\text{E})} \frac{q_j^{(\text{E})}}{φ}$, we obtain $n_j = n_j^{(\text{E})} = \frac{L_j}{σ f} = n_j^{(\text{A})}$
-  \item $P_j^{(\text{E})} = [n_j {p_j}^{1 - σ} + n_{\jbar} {(τ p_{\jbar})}^{1 - σ}]^\frac{1}{1 - σ}$
+  \item $P_j^{(\text{E})} = \left[n_j {p_j^{(\text{E})}}^{1 - σ} + n_{\jbar} {(τ p_{\jbar}^{(\text{E})})}^{1 - σ}\right]^\frac{1}{1 - σ}$
   \item With $τ = 1$ and $n_j = n_{\jbar}$, we get $P_j^{(\text{E})} = \frac{P_j^{(\text{A})}}{2^\frac{1}{σ - 1}}$: price index decreases
   \item No pro-competitive effect: $σ$ fixed, does not contribute to lowering prices
-  \item From above, $q_{j → \jbar} = \left(\frac{p_{j → \jbar}}{P_{\jbar}^{(\text{E})}}\right)^{-σ} \frac{w_{\jbar} L_{\jbar}}{P_{\jbar}^{(\text{E})}}$, thus $q_{j → \jbar} = \left(\frac{τ p_j}{P_{\jbar}^{(\text{E})}}\right)^{-σ} \frac{w_{\jbar} L_{\jbar}}{P_{\jbar}^{(\text{E})}}$
-  \item It follows that the value $X_j = τ p_j n_j q_{j → \jbar}$ of aggregate exports (the gravity equation) depends linearly on $L_j L_{\jbar}$ (shouldn’t account for $P$ which depends on $n$ which depends on $L$?) and on $τ^{1 - σ}$ (note also that $0 ≤ τ^{1 - σ} ≤ 1$)
-  \item From trade balance $X_j = X_{\jbar}$, $\frac{p_j}{p_{\jbar}} = \frac{w_j}{w_{\jbar}}$, $\frac{n_j}{n_{\jbar}} = \frac{L_j}{L_{\jbar}}$ and $\frac{q_{j → \jbar}}{q_{\jbar → j}} = \frac{w_j^{-σ} w_{\jbar} L_{\jbar} {P_j^{(\text{E})}}^{1 - σ}}{w_{\jbar}^{-σ} w_j L_j {P_{\jbar}^{(\text{E})}}^{1 - σ}}$,
+  \item From above, $q_{j → \jbar} 
+  = \left(\frac{p_{j → \jbar}}{P_{\jbar}^{(\text{E})}}\right)^{-σ} \frac{w_{\jbar}^{(\text{E})} L_{\jbar}}{P_{\jbar}^{(\text{E})}}$, 
+  thus $q_{j → \jbar} 
+  = \left(\frac{τ p_j^{(\text{E})}}{P_{\jbar}^{(\text{E})}}\right)^{-σ} \frac{w_{\jbar}^{(\text{E})} L_{\jbar}}{P_{\jbar}^{(\text{E})}}$
+  \item It follows that the value $X_j = τ p_j^{(\text{E})} n_j q_{j → \jbar}$ of aggregate exports (the gravity equation) depends linearly on $L_j L_{\jbar}$ (shouldn’t account for $P$ which depends on $n$ which depends on $L$?) and on $τ^{1 - σ}$ (note also that $0 ≤ τ^{1 - σ} ≤ 1$)
+  \item From trade balance $X_j = X_{\jbar}$, $\frac{p_j^{(\text{E})}}{p_{\jbar}^{(\text{E})}} = \frac{w_j^{(\text{E})}}{w_{\jbar}^{(\text{E})}}$, $\frac{n_j}{n_{\jbar}} = \frac{L_j}{L_{\jbar}}$ and $\frac{q_{j → \jbar}}{q_{\jbar → j}} = \frac{{w_j^{(\text{E})}}^{-σ} w_{\jbar}^{(\text{E})} L_{\jbar} {P_j^{(\text{E})}}^{1 - σ}}{{w_{\jbar}^{(\text{E})}}^{-σ} w_j^{(\text{E})} L_j {P_{\jbar}^{(\text{E})}}^{1 - σ}}$,
   it follows that 
-  $\frac{X_j}{X_{\jbar}} = 1 = \frac{w_j^{-σ} {P_j^{(\text{E})}}^{1 - σ}}{w_{\jbar}^{-σ} {P_{\jbar}^{(\text{E})}}^{1 - σ}}$,
-  whence $\big(\frac{w_j}{w_{\jbar}}\big)^σ = \left(\frac{P_j^{(\text{E})}}{P_{\jbar}^{(\text{E})}}\right)^{1 - σ}$
-  \item Recall that largest country had smaller prices (Sl. 20, do we mean higher real wages $\frac{w_j^{(\text{A})}}{P_j^{(\text{A})}}$? Can we compare utilities? True even with $τ = 1$, right?); trade balance obliges to keep wages higher in the biggest country, which lower its exports (unless $τ = 1$, why?)
-  \item With $τ = 1$, we get that $P_j^{(\text{E})} = P_{\jbar}^{(\text{E})}$ and thus $w_j = w_{\jbar}$
-  % \item With $1 < τ$ (thus $τ^{1 - σ} < 1$), we are supposed to obtain that $L_j < L_{\jbar} ⇒ P_{\jbar} < P_j$ 
-  \item With $1 < τ$ (thus $τ^{1 - σ} < 1$), we should obtain that largest country has higher wages
+  $\frac{X_j}{X_{\jbar}} = 1 = \frac{{w_j^{(\text{E})}}^{-σ} {P_j^{(\text{E})}}^{1 - σ}}{{w_{\jbar}^{(\text{E})}}^{-σ} {P_{\jbar}^{(\text{E})}}^{1 - σ}}$,
+  whence $\big(\frac{w_j^{(\text{E})}}{w_{\jbar}^{(\text{E})}}\big)^σ = \left(\frac{P_j^{(\text{E})}}{P_{\jbar}^{(\text{E})}}\right)^{1 - σ}$
+  \item Recall that largest country had smaller prices (Sl. 20, do we mean higher real wages $\frac{w_j^{(\text{A})}}{P_j^{(\text{A})}}$? Can we compare utilities? True even with $τ = 1$, right?); trade balance obliges to keep wages higher in the biggest country, which lowers its exports (unless $τ = 1$, why?)
+  \item With $τ = 1$, we get that $w_j^{(\text{E})} = w_{\jbar}^{(\text{E})}$
+  \item With $1 < τ$ (thus $t < 1$): from $w^σ = \frac{L w^{1 - σ} + t}{1 + tLw^{1 - σ}}$, with $w = \frac{w_j}{w_{\jbar}}$, $L = \frac{L_j}{L_{\jbar}}$ and $t = τ^{1 - σ}$, thus $w^σ + tLw - L w^{1 - σ} - t = 0$, plugging $w = 1$ yields $w^σ + tLw - L w^{1 - σ} - t = (1 - t) (1 - L) = (t - 1) (L - 1)$, whose sign is the inverse of $L - 1$, and the expression is increasing in $w$ (its derivative is positive), thus $1 < L ⇔ 1 < w$: largest country has higher wages
   % (sl. 20; I get $\left(\frac{P_{\jbar}^{(\text{E})}}{P_j^{(\text{E})}}\right)^{σ - 1} = \frac{\frac{L_j w_j^{1 - σ}}{L_{\jbar} w_{\jbar}^{1 - σ}} + t}{1 + t \frac{L_j w_j^{1 - σ}}{L_{\jbar} w_{\jbar}^{1 - σ}}}$ and with $L_j = 1$, $L_{\jbar} = 2$, $(\frac{w_j}{w_{\jbar}})^{1 - σ} = 3$ we get $P_j < P_{\jbar}$; how to conclude without using balanced exports?)
-  \item With $τ = ∞$ (thus $τ^{1 - σ}$ = 0), we obtain that
-  $\big(\frac{w_j}{w_{\jbar}}\big)^σ
+  \item With $τ = ∞$ (thus $τ^{1 - σ}$ = 0), we can conclude more directly: $\big(\frac{w_j}{w_{\jbar}}\big)^σ
   = \frac{n_j}{n_{\jbar}} \left(\frac{p_j}{p_{\jbar}}\right)^{1 - σ}
   = \frac{L_j}{L_{\jbar}} \left(\frac{w_j}{w_{\jbar}}\right)^{1 - σ}$, 
   thus $\frac{w_j}{w_{\jbar}} 
-  = \left(\frac{L_j}{L_{\jbar}}\right)^\frac{1}{2σ - 1}$:
-  largest country has higher wages
+  = \left(\frac{L_j}{L_{\jbar}}\right)^\frac{1}{2σ - 1}$
 \end{itemize}
 Mechanisms through which trade increases:
 \begin{description}
