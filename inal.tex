@@ -85,7 +85,7 @@ Let’s double $L$
   \item More varieties: $n_0 = \frac{1}{\frac{f}{L} + \frac{c_0}{φ}} < \frac{1}{\frac{f}{2L} + \frac{c_1}{φ}} = n_1$
   \item Under assumption $σ'(c) < 0$, $σ(c_0) < σ(c_1)$ thus $(\frac{p}{w})_1 < (\frac{p}{w})_0$
   \item Under assumption $σ'(c) < 0$, some firms exit: $n_1 = \frac{1}{\frac{f}{2L} + \frac{c_1}{φ}} < \frac{1}{\frac{f}{2L} + \frac{c_0}{2 φ}} = 2 n_0$, equivalently, $c_0 < 2 c_1$.
-  Proof: let $(c_1, (\frac{p}{w})_1)$ be the equilibrium after doubling $L$, thus $(2c_1, (\frac{p}{w})_1)$ is on the ZZ curve before doubling $L$, and all points with $c ≥ 2 c_1$ are strictly below the PP curve (because its derivative is positive) and not below the ZZ curve (because its derivative is negative) so not equilibrium points.
+  Proof: let $\left(c_1, \left(\frac{p}{w}\right)_1\right)$ be the equilibrium after doubling $L$, thus $\left(2c_1, \left(\frac{p}{w}\right)_1\right)$ is on the ZZ curve before doubling $L$, and all points with $c ≥ 2 c_1$ are strictly below the PP curve (because its derivative is positive) and not below the ZZ curve (because its derivative is negative) so not equilibrium points.
 \end{itemize}
 
 \section{CES utility}
@@ -111,7 +111,7 @@ Let’s double $L$
   \item $U(\bar{c}) = (\sum p_i^{1 - σ})^{\frac{σ}{σ - 1}} λ^{-σ} U(\bar{c})$, whence $λ^{-σ} = (\sum p_i^{1 - σ})^{\frac{σ}{1 - σ}}$, and using $\frac{w}{U(\bar{c})} = \sum p_i^{1 - σ} λ^{-σ}$, we get $\frac{w}{U(\bar{c})} = (\sum p_i^{1 - σ})^{\frac{1}{1 - σ}}$
   \item Define the ideal price index as $P = \frac{w}{U(\bar{c})} = (\sum p_i^{1 - σ})^\frac{1}{1 - σ}$: it increases in the same way that the welfare decreases (price-index elasticity of utility is minus one); it is the cost of one unit of happiness
   \item We can write $q_i = (\frac{p_i}{P})^{-σ} \frac{wL}{P}$
-  \item We obtain elasticity of demand $ε_i = \frac{∂q_i}{∂p_i} \frac{p_i}{q_i} = \left(-σ q_i (\frac{p_i}{P})^{-1} \frac{∂}{∂p_i} (\frac{p_i}{P})\right) \frac{p_i}{q_i}$, and, approximating $P$ as constant with respect to $p_i$ (does this make sense?), $ε_i ≈ -σ$
+  \item We obtain elasticity of demand $ε_i = \frac{∂q_i}{∂p_i} \frac{p_i}{q_i} = \left(-σ q_i (\frac{p_i}{P})^{-1} \frac{∂}{∂p_i} (\frac{p_i}{P})\right) \frac{p_i}{q_i}$, and, considering $P$ as constant with respect to $p_i$ (which seems to hold if considering a continuous world of varieties which each have null measure), $ε_i ≈ -σ$
   \item Given goods $i ≠ j$, elasticity of substitution $ε_{ij} = \frac{∂ln(q_i / q_j)}{∂ln(p_j / p_i)} = -σ$ (using $\frac{q_i}{q_j} = (\frac{p_i}{p_j})^{-σ}$)
   \item Using symmetric prices, $P = n^{\frac{1}{1 - σ}} p$
   \item We have $U_j(\bar{q}) = \frac{Lw}{p} n^\frac{1}{σ - 1}$ thus $\frac{∂ \log U}{∂ \log n} = \frac{1}{σ - 1}$
@@ -135,7 +135,7 @@ Let’s double $L$
 \NewDocumentCommand{\jbar}{}{\overline{j}}
 Two countries $\set{D, X}$ with same parameters except for sizes $L_j$ ($j \in \set{D, X}$) open up and starts trading; we write their initial variable levels (in autarky) as $v_j^{(\text{A})}$ and resulting variable levels (under exchange) as $v_j^{(\text{E})}$; given $j \in \set{D, X}$, let $\jbar$ denote the other country.
 \begin{itemize}
-  \item Prices of goods produced and sold in a given country $j ∈ \set{D, X}$ are still $p_j = p_j^{(\text{A})} = p_j^{(\text{E})} = \frac{σ}{σ - 1} \frac{w_j}{φ}$ (Does this make sense? If wages change, prices should change. If so, do slides refer to old or new prices? What’s even the meaning of prices changing, as they set the unit of the scale? Should we assume $p_j^{(\text{A})}, p_j^{(\text{E})}, p_{\jbar}^{(\text{A})}$ fixed but $p_{\jbar}^{(\text{E})}$ variable?)
+  \item Prices of goods produced and sold in a given country $j ∈ \set{D, X}$ are still $p_j = p_j^{(\text{A})} = p_j^{(\text{E})} = \frac{σ}{σ - 1} \frac{w_j}{φ}$ (Does this make sense? If wages change, prices should change. If so, do slides refer to old or new prices? What’s even the meaning of prices changing, as they set the unit of the scale? Should we assume $p_j^{(\text{A})}, p_j^{(\text{E})}, p_{\jbar}^{(\text{A})}$ fixed but $p_{\jbar}^{(\text{E})}$ variable? Actually we can normalize only one of the variables, say, the new wage!)
   \item Iceberg type trading cost: goods sold in the other country have price $p_{j → \jbar} = p_{j → \jbar}^{(\text{E})} = τ p_j$, with $1 ≤ τ$
   \item Total production of a good produced in $j$ becomes $q_j^{(\text{E})} = q_{j → j} + τ q_{j → \jbar}$, with $q_{j → \jbar} = q_{j → \jbar}^{(\text{E})}$ the quantity that effectively arrives abroad
   \item Thus the enterprise sells $q_j^{(\text{E})}$ at price $p_j$, equivalently, $q_{j → j}$ at price $p_j$ domestically and $q_{j → \jbar}$ at price $τ p_j$ abroad
@@ -178,7 +178,7 @@ Mechanisms through which trade increases:
   \item Consumer: $c_j = 1/L_j$, $U(c_j) = L_j$
   \item Set $L_D = 1$ and $L_X = 2$
   \item $n_D = P_D^{(\text{A})} = c_D = U(c_D) = 1$
-  \item $n_X = U(c_X) = 2$, $P_X^{(\text{A})} = c_X = 1/2$
+  \item $n_X = U(c_X) = 2$, $P_X^{(\text{A})} = c_X = \frac{1}{2}$
   \item $p_{j → \jbar} = τ$
   \item $P_D^{(\text{E})} = 1/(1 + 2/τ) = τ/(τ+2)$
   \item $P_X^{(\text{E})} = 1/(2 + 1/τ) = τ/(2τ+1)$
@@ -215,14 +215,6 @@ Note that there is no aggregate profit to redistribute because the total profit 
   \item Fixed costs $f_d$ to serve domestic market and $f_x$ to serve foreign market
   \item As above, we obtain $p_φ = \frac{σ}{σ - 1} \frac{1}{φ}$
   \item Revenue of firm of type $φ$ is $r(φ) = p_φ q_φ = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^{σ - 1}} = A φ^{σ - 1}$ with $A = \frac{L}{P^{1 - σ}} (\frac{σ - 1}{σ})^{σ - 1}$
-  \item Profit is $π(φ) = B_a φ^{σ - 1} - f_d$ with $B_a = \frac{L}{P_a^{1 - σ}} \frac{(σ - 1)^{σ - 1}}{σ^{σ - 1} σ} = \frac{A}{σ}$
-  \item Profit is $π(φ) 
-  = p_φ q_φ - \frac{q_φ}{φ} - f_d
-  = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^{σ - 1}} - \frac{L}{P^{1 - σ}} \frac{1}{φ p_φ^σ} - f_d
-  = \frac{L}{P^{1 - σ}} (\frac{1}{p_φ^{σ - 1}} - \frac{1}{φ p_φ^σ}) - f_d
-  = \frac{L}{P^{1 - σ}} ((\frac{σ - 1}{σ})^{σ - 1} φ^{σ - 1} - (\frac{σ - 1}{σ})^σ φ^{σ - 1}) - f_d
-  = \frac{L}{P^{1 - σ}} (\frac{σ - 1}{σ})^{σ - 1} φ^{σ - 1} (1 - (\frac{σ - 1}{σ})) - f_d
-  = A φ^{σ - 1} (\frac{1}{σ}) - f_d$
   \item Profit is $π(φ) 
   = p_φ q_φ - \frac{q_φ}{φ} - f_d
   = p_φ q_φ (1 - \frac{1}{p_φ φ}) - f_d
@@ -230,25 +222,35 @@ Note that there is no aggregate profit to redistribute because the total profit 
   = A φ^{σ - 1} (\frac{1}{σ}) - f_d 
   = B φ^{σ - 1} - f_d$
   with $B = \frac{A}{σ}$
-  % \item Profit is $π(φ) 
-  % = p_φ q_φ - \frac{q_φ}{φ} - f_d 
-  % = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^{σ - 1}} - \frac{L}{P^{1 - σ}} \frac{1}{φ p_φ^σ} - f_d 
-  % = \frac{L}{P^{1 - σ}} (\frac{1}{p_φ^{σ - 1}} - \frac{1}{φ p_φ^σ}) - f_d
-  % = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^{σ - 1}} (1 - \frac{1}{φ p_φ}) - f_d$
-  % \item Profit is $π(φ) = r(φ) - \frac{q_φ}{φ} - f_d = \frac{r(φ)}{σ} - f_d$
-  \item Zero Cutoff (ZCP?) is the level $φ_a$ such that $π(φ_a) = 0$
+  \item Zero Cutoff Profit condition: introduce the level $φ_a$ such that $π(φ_a) = 0$
   \item Firms in $(0, φ_a)$ exit, set with measure $G(φ_a)$; define $Φ^* = (φ_a, ∞)$ as the active firms, with measure $μ(Φ^*)$; define $μ^* = \frac{μ}{μ(Φ^*)}$ as the measure normalized for the active firms (thus, the conditional distribution of productivity given entry)
   \item Define fixed entry cost $f_e = \int_{Φ^*} π dμ$ as the expected profit of entering
-  \item Aggregate productivity is $\bar{φ}(φ_a) = (\int_{Φ^*} φ^{σ - 1} dμ^*)^\frac{1}{σ - 1}$
-  \item Let $M_e$ be the mass of drawers (potential entrants), then the mass of producers (entered) is $M_a = M_e (1 - G(φ_a))$
+  \item Let $M_e$ be the mass of drawers (potential entrants), then the mass of producers (entered) is $M_a = M_e μ(Φ^*)$; define $ν^* = M_a μ^*$ as the measure $ν^*(F)$ of firms of kind $F$ conditional to activity
+  \item Define aggregate revenue as $R_a = \int r(φ) dν^* = M_a \int r(φ) dμ^*$
+  \item Aggregate productivity is defined as the productivity $\bar{φ}(φ_a) = r^{-1}(\frac{R_a}{M_a})$ that yields average revenue, and, from $\frac{R_a}{M_a} = A \int φ^{σ - 1} dμ^*$, $\bar{φ}(φ_a)^{σ - 1} = \int φ^{σ - 1} dμ^*$
+  \item Similarly, with $Π_a$ the aggregate profit, expected profit conditional on entry is $\frac{Π_a}{M_a} = \int π(φ) dμ^* = B \int φ^{σ - 1} dμ^* - f_d = π(\bar{φ}(φ_a))$
+  \item Expected profit (unconditionally) is $\int π(φ) dμ = \frac{Π_a}{M_e} = μ(Φ^*) π(\bar{φ}(φ_a))$, thus $Π_a = M_e μ(Φ^*) π(\bar{φ}(φ_a)) = M_a π(\bar{φ}(φ_a)) = M_a \int π(φ) dμ^* = \frac{M_a}{μ(Φ^*)} \int_{Φ^*} π(φ) dμ = M_e \int_{Φ^*} π(φ) dμ = M_e f_e$
   \item Price index under autarky of producers (?) is 
   $P_a = (M_a \int_{Φ^*} p_φ^{1 - σ} dμ^*)^\frac{1}{1 - σ} 
   = M_a^\frac{1}{1 - σ} \frac{σ}{σ - 1} (\int_{Φ^*} (\frac{1}{φ})^{1 - σ} dμ^*)^\frac{1}{1 - σ} 
   = M_a^\frac{1}{1 - σ} \frac{σ}{σ - 1} \frac{1}{\bar{φ}(φ_a)}$
   \item We also use $B_a φ^{σ - 1} = \frac{φ^{σ - 1} - φ_a^{σ - 1}}{φ_a^{σ - 1}}$ (dunno why)
-  \item Obtain $f_e = f_d J(φ_a)$ with $J(φ_a) = \int_{Φ^*} \left((\frac{φ}{φ_a})^{σ - 1} - 1\right) dμ$
-  \item Expected profit conditional to entering is $\bar{π}(φ_a) = \int_{Φ^*} π(φ) dμ^* = \frac{f_e}{μ(Φ^*)}$
+  \item Obtain $f_e = f_d J(φ_a)$ with $J(φ_a) = \int_{Φ^*} \left((\frac{φ}{φ_a})^{σ - 1} - 1\right) dμ$, as $f_e = \int_{Φ^*} π dμ = \int_{Φ^*} (\frac{r(φ)}{σ} - f_d) dμ = \int_{Φ^*} (\frac{A φ^{σ - 1}}{σ} - f_d) dμ$ and as $π(φ_a) = 0$, thus $\frac{A}{σ} φ_a^{σ - 1} - f_d = 0$
 \end{itemize}
+
+\section{Gravity equation}
+\begin{itemize}
+  \item $X_{ij}$ the exports from $i$ to $j$
+  \item $Y_i = \sum_j X_{ij}$ is all the exports from $i$ to the world, including to itself, so it’s the production
+  \item $X_j = \sum_i X_{ij}$ is all the imports from the world to $j$, including from itself, so it’s total consumption
+  \item Here we do not assume that $Y_i = X_i$: some countries have imbalance, for reasons not explained by this approach (capital investments, which could compensate, are not considered); though we do assume market clear, so the sum of trade deficits is zero
+  \item With some models we will assume that the quality of the good $ω$ is $a_{ijω}$ thus reflects intrinsic quality of the good and its appreciation by consumers
+  \item There is some competition that bring profit to zero, within one country, for a given variety
+  \item Note that on slide 28 there should be no $ω$
+  \item We assume a single $ω$ per source country, so $ω$ and $i$ are the same thing 
+\end{itemize}
+When total production and total consumption are equal, we can equal $Y_j$ and $X_j$
+$X_{ij} = \frac{Y_i}{}$
 %\bibliography{bibl}
 
 \end{document}
