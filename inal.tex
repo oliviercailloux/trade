@@ -9,12 +9,9 @@
 
 \title{International Economics II: course notes \thanks{Course given by Gabriel Smagghue}}
 \author{Olivier Cailloux}
-\author{Name2}
 \affil{Université Paris-Dauphine, PSL Research University, CNRS, LAMSADE, 75016 PARIS, FRANCE\\
   \href{mailto:olivier.cailloux@dauphine.psl.eu}{olivier.cailloux@dauphine.psl.eu}
 }
-\author{Name3}
-\affil{Affil2}
 \hypersetup{
   pdfsubject={},
   pdfkeywords={},
@@ -185,17 +182,6 @@ Mechanisms through which trade increases:
 \end{itemize}
 
 \section{Melitz}
-\subsection{Various notes}
-Problem is that more productive firms seem to export, which the model does not say; this is not solvable even with different trading costs (not sure why)
-
-Here we implicitly normalize by setting $w = 1$.
-
-We write $φ_d$ the equivalent of $φ_a$ under non-autarky so actually $φ_a^{(1)}$ as compared to $φ_a^{(0)}$
-
-Note that $π(φ)$ is the profit of a single firm of the type $φ$; to get the profit of the whole type $φ$ we’d need to consider the density $g$.
-
-Note that there is no aggregate profit to redistribute because the total profit is precisely the total entry cost (zero entry condition).
-
 \subsection{Set up}
 \begin{itemize}
   \item We normalize the wage to $w = 1$
@@ -212,10 +198,10 @@ Note that there is no aggregate profit to redistribute because the total profit 
 
 \subsection{Producer}
 \begin{itemize}
-  \item Fixed costs $f_d$ to serve domestic market and $f_x$ to serve foreign market
   \item As above, we obtain $p_φ = \frac{σ}{σ - 1} \frac{1}{φ}$
-  \item Revenue of firm of type $φ$ is $r(φ) = p_φ q_φ = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^{σ - 1}} = A φ^{σ - 1}$ with $A = \frac{L}{P^{1 - σ}} (\frac{σ - 1}{σ})^{σ - 1}$
-  \item Profit is $π(φ) 
+  \item Revenue of (a single) firm of type $φ$ is $r(φ) = p_φ q_φ = \frac{L}{P^{1 - σ}} \frac{1}{p_φ^{σ - 1}} = A φ^{σ - 1}$ with $A = \frac{L}{P^{1 - σ}} (\frac{σ - 1}{σ})^{σ - 1}$
+  \item Assuming still that producing $q_φ$ units require labor $l_φ = \frac{q_φ}{φ} + f_d$, with fixed costs $f_d$ to serve domestic market, profit is $π(φ) 
+  = r(φ) - l_φ
   = p_φ q_φ - \frac{q_φ}{φ} - f_d
   = p_φ q_φ (1 - \frac{1}{p_φ φ}) - f_d
   = p_φ q_φ (1 - \frac{σ - 1}{σ}) - f_d
@@ -227,17 +213,46 @@ Note that there is no aggregate profit to redistribute because the total profit 
   \item Define fixed entry cost $f_e = \int_{Φ^*} π dμ$ as the expected profit of entering
   \item Let $M_e$ be the mass of drawers (potential entrants), then the mass of producers (entered) is $M_a = M_e μ(Φ^*)$; define $ν^* = M_a μ^*$ as the measure $ν^*(F)$ of firms of kind $F$ conditional to activity
   \item Define aggregate revenue as $R_a = \int r(φ) dν^* = M_a \int r(φ) dμ^*$
-  \item Aggregate productivity is defined as the productivity $\bar{φ}(φ_a) = r^{-1}(\frac{R_a}{M_a})$ that yields average revenue, and, from $\frac{R_a}{M_a} = A \int φ^{σ - 1} dμ^*$, $\bar{φ}(φ_a)^{σ - 1} = \int φ^{σ - 1} dμ^*$
-  \item Similarly, with $Π_a$ the aggregate profit, expected profit conditional on entry is $\frac{Π_a}{M_a} = \int π(φ) dμ^* = B \int φ^{σ - 1} dμ^* - f_d = π(\bar{φ}(φ_a))$
-  \item Expected profit (unconditionally) is $\int π(φ) dμ = \frac{Π_a}{M_e} = μ(Φ^*) π(\bar{φ}(φ_a))$, thus $Π_a = M_e μ(Φ^*) π(\bar{φ}(φ_a)) = M_a π(\bar{φ}(φ_a)) = M_a \int π(φ) dμ^* = \frac{M_a}{μ(Φ^*)} \int_{Φ^*} π(φ) dμ = M_e \int_{Φ^*} π(φ) dμ = M_e f_e$
-  \item Price index under autarky of producers (?) is 
-  $P_a = (M_a \int_{Φ^*} p_φ^{1 - σ} dμ^*)^\frac{1}{1 - σ} 
-  = M_a^\frac{1}{1 - σ} \frac{σ}{σ - 1} (\int_{Φ^*} (\frac{1}{φ})^{1 - σ} dμ^*)^\frac{1}{1 - σ} 
-  = M_a^\frac{1}{1 - σ} \frac{σ}{σ - 1} \frac{1}{\bar{φ}(φ_a)}$
-  \item We also use $B_a φ^{σ - 1} = \frac{φ^{σ - 1} - φ_a^{σ - 1}}{φ_a^{σ - 1}}$ (dunno why)
+  \item Aggregate productivity is defined as the productivity $\bar{φ} = r^{-1}(\frac{R_a}{M_a})$ that yields average revenue; from $\frac{R_a}{M_a} = A \int φ^{σ - 1} dμ^*$, we obtain $\bar{φ}^{σ - 1} = \int φ^{σ - 1} dμ^*$
+  \item Similarly, with $Π_a$ the aggregate profit, expected profit conditional on entry is $\frac{Π_a}{M_a} = \int π(φ) dμ^* = B \int φ^{σ - 1} dμ^* - f_d = π(\bar{φ})$
+  \item Expected profit (unconditionally) is $\int π(φ) dμ = \frac{Π_a}{M_e} = μ(Φ^*) π(\bar{φ})$, thus $Π_a = M_e μ(Φ^*) π(\bar{φ}) = M_a π(\bar{φ}) = M_a \int π(φ) dμ^* = \frac{M_a}{μ(Φ^*)} \int_{Φ^*} π(φ) dμ = M_e \int_{Φ^*} π(φ) dμ = M_e f_e$
+  % \item Price index under autarky of producers (?) is 
+  % $P_a = (M_a \int_{Φ^*} p_φ^{1 - σ} dμ^*)^\frac{1}{1 - σ} 
+  % = M_a^\frac{1}{1 - σ} \frac{σ}{σ - 1} (\int_{Φ^*} (\frac{1}{φ})^{1 - σ} dμ^*)^\frac{1}{1 - σ} 
+  % = M_a^\frac{1}{1 - σ} \frac{σ}{σ - 1} \frac{1}{\bar{φ}}$
+  % \item We also use $B_a φ^{σ - 1} = \frac{φ^{σ - 1} - φ_a^{σ - 1}}{φ_a^{σ - 1}}$ (dunno why)
   \item Obtain $f_e = f_d J(φ_a)$ with $J(φ_a) = \int_{Φ^*} \left((\frac{φ}{φ_a})^{σ - 1} - 1\right) dμ$, as $f_e = \int_{Φ^*} π dμ = \int_{Φ^*} (\frac{r(φ)}{σ} - f_d) dμ = \int_{Φ^*} (\frac{A φ^{σ - 1}}{σ} - f_d) dμ$ and as $π(φ_a) = 0$, thus $\frac{A}{σ} φ_a^{σ - 1} - f_d = 0$
-  \item Also, $\frac{∂f_e}{∂φ_a} = -\frac{σ - 1}{φ_a^{σ - 1}} (-φ_a^{σ - 1})g(φ_a)$
+  \item Also, $\frac{∂J(φ_a)}{∂φ_a} < 0$, as 
+  $\frac{∂J(φ_a)}{∂φ_a} 
+  = \scalebox{1.2}[1.3]{$\int$}_{\hspace{-0.2em}Φ^*} \frac{∂}{∂φ_a} \left((\frac{φ}{φ_a})^{σ - 1} - 1\right) dμ$ (because the boundary term $(\frac{φ_a}{φ_a})^{σ - 1} - 1$ vanishes), which equals
+  $\int_{Φ^*} -(σ - 1) \frac{φ^{σ - 1}}{φ_a^{σ - 2}} dμ$
+  (or without using Leibniz rule explicitly,
+  $\frac{∂J(φ_a)}{∂φ_a} 
+  = \frac{∂}{∂φ_a} [\frac{1}{φ_a^{σ - 1}} \int_{Φ^*} φ^{σ - 1} dμ] - \frac{∂μ(Φ^*)}{∂φ_a} 
+  = [-\frac{σ - 1}{φ_a^{σ - 2}} \int_{Φ^*} φ^{σ - 1} dμ + \frac{1}{φ_a^{σ - 1}} (-φ_a^{σ - 1}) g(φ_a)] - (-g(φ_a))$, with density $g = \frac{dμ}{dφ}$)
+  \item We can also write $π(φ) 
+  = r(φ) - l_φ
+  = p_φ q_φ - \frac{q_φ}{φ} - f_d
+  = \frac{q_φ}{φ} (p_φ φ - 1) - f_d
+  = \frac{q_φ}{φ} (\frac{σ}{σ - 1} - 1) - f_d
+  = \frac{q_φ}{φ} \frac{1}{σ - 1} - f_d$
+  \item Full employment condition requires $L = \int l_φ dν^* + M_e f_e 
+  = \int (\frac{q_φ}{φ} + f_d) dν^* + \int π(φ) dν^*
+  = \int ((σ - 1) π(φ) + σ f_d + π(φ)) dν^*
+  = \int (σ π(φ) + σ f_d) dν^*
+  = σ M_a (π(\bar{φ}) + f_d)$,%
+  thus $M_a = \frac{L}{σ (π(\bar{φ}) + f_d)}$ (differs from slides and problem set, error?)
+  % \item Note that there is no aggregate profit to redistribute because the total profit is precisely the total entry cost (zero entry condition).
 \end{itemize}
+
+\subsection{Open economy}
+\begin{itemize}
+  \item Fixed costs $f_x$ to serve foreign market; marginal costs are $\frac{τ}{φ}$; thus export prices are $p^x_φ = \frac{σ}{σ - 1} \frac{τ}{φ}$
+  % \item We write $φ_d$ the equivalent of $φ_a$ under non-autarky so actually $φ_a^{(1)}$ as compared to $φ_a^{(0)}$
+% Problem of K is that more productive firms seem to export, which the model does not say; this is not solvable even with different trading costs (not sure why)
+\end{itemize}
+
+\end{document}
 
 \section{Gravity equation}
 \begin{itemize}
@@ -253,6 +268,4 @@ Note that there is no aggregate profit to redistribute because the total profit 
 When total production and total consumption are equal, we can equal $Y_j$ and $X_j$
 $X_{ij} = \frac{Y_i}{}$
 %\bibliography{bibl}
-
-\end{document}
 
